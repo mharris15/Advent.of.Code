@@ -13,48 +13,72 @@ namespace Advent.of.Code._2022
         {
 
             #region Init
-            var textLines = File.ReadAllLines("C:\\Users\\MichaelHarris\\OneDrive - Agility Partners\\Documents\\repos\\Internal\\Advent\\Advent.of.Code\\Advent.of.Code\\Data\\day_1_input.txt");
-            // Part 1
-            List<int> elves = new List<int>();
-            int max = 0;
-            int calories = 0;
+            var textLines = File.ReadAllLines("C:\\Users\\MichaelHarris\\OneDrive - Agility Partners\\Documents\\repos\\Internal\\Advent\\Advent.of.Code\\Advent.of.Code\\Data\\day_2_input.txt");
+ 
+            int score = 0;
+            int secretScore = 0;
 
-            // Part 2
-            int count = 0;
-            int multipleElves = 0;
+
+
 
             #endregion
 
             #region Part1
             foreach (var line in textLines)
             {
-                // is line numeric
-                if(int.TryParse(line, out int num))
+                // Win
+                if(line.Contains("A Y") || line.Contains("B Z") || line.Contains("C X"))
                 {
-                    calories += num;
-
+                    score += 6;
                 }
-                else
+
+                // Draw
+                if (line.Contains("A X") || line.Contains("B Y") || line.Contains("C Z"))
                 {
-                    elves.Add(calories);
-                    // set max value
-                    if(max < calories) { max = calories; }
-                    calories = 0;
+                    score += 3;
+                }
+
+                // Rock
+                if (line.Contains("X"))
+                {
+                    score += 1;
+                    
+                }
+                // Paper
+                if (line.Contains("Y"))
+                {
+                    score += 2;
+                    secretScore += 3;
+                }
+                // Scissor
+                if (line.Contains("Z"))
+                {
+                    score += 3;
+                    secretScore += 6;
+                }
+                // Secret X
+                if (line.Contains("A Y") || line.Contains("B X") || line.Contains("C Z"))
+                {
+                    secretScore += 1;
+                }
+                // Secret Y
+                if (line.Contains("A Z") || line.Contains("B Y") || line.Contains("C X"))
+                {
+                    secretScore += 2;
+                }
+                // Secret Z
+                if (line.Contains("A X") || line.Contains("B Z") || line.Contains("C Y"))
+                {
+                    secretScore += 3;
                 }
             }
+            Console.WriteLine("Total Score: " + score);
 
-            Console.WriteLine("Max number is: " + max);
             #endregion
 
             #region Part2
-            do
-            {
-                multipleElves += elves.Max();
-                elves.Remove(elves.Max());
-                count++;
+            Console.WriteLine("Total Secret Score: " + secretScore);
 
-            } while (count < 3);
-            Console.WriteLine("Calories of top 3 elves are: " + multipleElves);
             #endregion
         }
     }
