@@ -13,7 +13,7 @@ namespace Advent.of.Code._2022
         {
 
             #region Init
-            var textLines = File.ReadAllLines("C:\\Users\\MichaelHarris\\OneDrive - Agility Partners\\Documents\\repos\\Internal\\Advent\\Advent.of.Code\\Advent.of.Code\\Data\\day_1_input.txt");
+            var textLines = File.ReadAllLines("C:\\Users\\MichaelHarris\\OneDrive - Agility Partners\\Documents\\repos\\Internal\\Advent\\Advent.of.Code\\Advent.of.Code\\Data\\2022\\day_1_input.txt");
             // Part 1
             List<int> elves = new List<int>();
             int max = 0;

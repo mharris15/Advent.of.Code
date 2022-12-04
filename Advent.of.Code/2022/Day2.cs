@@ -13,7 +13,7 @@ namespace Advent.of.Code._2022
         {
 
             #region Init
-            var textLines = File.ReadAllLines("C:\\Users\\MichaelHarris\\OneDrive - Agility Partners\\Documents\\repos\\Internal\\Advent\\Advent.of.Code\\Advent.of.Code\\Data\\day_2_input.txt");
+            var textLines = File.ReadAllLines("C:\\Users\\MichaelHarris\\OneDrive - Agility Partners\\Documents\\repos\\Internal\\Advent\\Advent.of.Code\\Advent.of.Code\\Data\\2022\\day_2_input.txt");
  
             int score = 0;
             int secretScore = 0;
