@@ -17,14 +17,12 @@ namespace Advent.of.Code._2022
     public class Day9
     {
         private static HashSet<(int x, int y)> _visited = new HashSet<(int x, int y)>();
-        
+        private static Coordinate headCoordinate = new Coordinate();
+        private static Coordinate tailCoordinate = new Coordinate();
 
 
         public static void Run(string[] input)
         {
-            Coordinate currentCoordinate = new Coordinate();
-            Coordinate headCoordinate = new Coordinate();
-            Coordinate tailCoordinate = new Coordinate();
             _visited.Add((tailCoordinate.x, tailCoordinate.y));
             Part1(input,headCoordinate,tailCoordinate);
         }
@@ -37,12 +35,9 @@ namespace Advent.of.Code._2022
                     updateHead(head,line);
                     updateTail(head, tail);
                     _visited.Add((tail.x, tail.y));
-
                 }
             }
-
-            Console.WriteLine("Part 1: " + _visited.Count());
-
+            Console.WriteLine("Part 1: " + _visited.Count);
         }
         private static void updateHead(Coordinate head,string line)
         {
@@ -65,7 +60,7 @@ namespace Advent.of.Code._2022
         }
         private static void updateTail(Coordinate head, Coordinate tail)
         {
-            if(Math.Abs(head.x - tail.x) > 1 || Math.Abs(head.y - head.x) > 1)
+            if(Math.Abs(head.x - tail.x) > 1 || Math.Abs(head.y - tail.y) > 1)
             { 
                 tail.x += Math.Sign(head.x - tail.x);
                 tail.y += Math.Sign(head.y - tail.y);
