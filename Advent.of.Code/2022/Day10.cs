@@ -14,7 +14,9 @@ using Microsoft.Win32;
 
 namespace Advent.of.Code._2022
 {
-
+    //var input = File.ReadAllText("input.txt")
+    //        .Split(' ', '\r', '\n').
+    //        Where(x => x != "").ToArray();
     public static class Day10
     {
         public static void Run(string[] input)
@@ -82,11 +84,7 @@ namespace Advent.of.Code._2022
                 {
                     signalStrength += cycle * register;
                 }
-                if (instruction == "addx" && previousInstruction != "addx")
-                {
-                    previousInstruction = instruction;
-                }
-                else if (instruction == "noop")
+                if ((instruction == "addx" && previousInstruction != "addx") || instruction == "noop")
                 {
                     previousInstruction = instruction;
                 }
