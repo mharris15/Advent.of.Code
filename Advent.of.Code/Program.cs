@@ -1,13 +1,9 @@
-﻿// See https://aka.ms/new-console-template for more information
-using Advent.of.Code._2022;
-using System.IO;
-using System.Reflection;
-using System.Runtime.CompilerServices;
+﻿using System.Reflection;
 
 class Program
 {
-    static string Year = "2023";
-    static string Day = "1";
+    static readonly string Year = "2023";
+    static readonly string Day = "1";
     
     static void Main()
     {
