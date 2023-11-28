@@ -18,7 +18,7 @@ class Program
         string directoryPath = Path.Combine(solutionDirectory, "Data", year);
         string filePath = Path.Combine(directoryPath, $"day_{day}_input.txt");
         var textlines = File.ReadAllLines(filePath);
-        return File.ReadAllText("C:\\Users\\MichaelHarris\\OneDrive - Agility Partners\\Documents\\repos\\Internal\\Advent\\Advent.of.Code\\Advent.of.Code\\Data\\2022\\day_10_input.txt")
+        return File.ReadAllText(filePath)
                .Split(' ', '\r', '\n').
                Where(x => x != "").ToArray();
     }
