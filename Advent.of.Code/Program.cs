@@ -17,7 +17,6 @@ class Program
         string solutionDirectory = GetSolutionDirectory();
         string directoryPath = Path.Combine(solutionDirectory, "Data", year);
         string filePath = Path.Combine(directoryPath, $"day_{day}_input.txt");
-        var textlines = File.ReadAllLines(filePath);
         return File.ReadAllText(filePath)
                .Split(' ', '\r', '\n').
                Where(x => x != "").ToArray();
@@ -39,7 +38,7 @@ class Program
     static void RunDay(string year, string day, string[] input)
     {
         string className = $"Day{day}";
-        Type type = Type.GetType($"Advent.of.Code._{year}.{className}"); ;
+        Type type = Type.GetType($"Advent.of.Code._{year}.{className}");
         try
         {
             if (type != null)
