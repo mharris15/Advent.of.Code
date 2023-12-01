@@ -7,8 +7,12 @@ class Program
     
     static void Main()
     {
+        Console.WriteLine("======================");
+        Console.WriteLine("Year: "+Year);
+        Console.WriteLine("Day: " + Day);
         string[] input = ReadText(Year,Day);
         RunDay(Year,Day,input);
+        Console.WriteLine("======================");
     }
 
 
