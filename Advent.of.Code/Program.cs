@@ -4,7 +4,7 @@ using System.Reflection;
 class Program
 {
     static readonly string Year = "2023";
-    static readonly string Day = "1";
+    static readonly string Day = "2";
     
     static void Main()
     {
@@ -43,18 +43,16 @@ class Program
     static void RunDay(string year, string day, string[] input)
     {
         string className = $"Day{day}";
-        Type type = Type.GetType($"Advent.of.Code._{year}.{className}");
+
+        // Attempt to retrieve Type based on provided classs name
+        Type type = Type.GetType($"Advent.of.Code._{year}.{className}") ?? throw new Exception($"Class {className} not found.");
+
+        // Attempt to create an instance of type Day
+        Day dayInstance = Activator.CreateInstance(type) is Day instance ? instance : throw new Exception($"Failed to create an instance of class {className}");
+
         try
-        {
-            if (type != null)
-            {
-                Day dayInstance = (Day)Activator.CreateInstance(type);
-                dayInstance.Run(input);
-            }
-            else
-            {
-                Console.WriteLine($"Class {className} not found.");
-            }
+        { 
+            dayInstance.Run(input);      
         }
         catch (Exception ex)
         {
