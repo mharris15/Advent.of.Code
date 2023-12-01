@@ -1,4 +1,4 @@
-﻿using Advent.of.Code._2023;
+﻿using Advent.of.Code;
 using System.Reflection;
 
 class Program
@@ -10,7 +10,7 @@ class Program
     {
         Console.WriteLine("======================");
         Console.WriteLine("Year: "+Year);
-        Console.WriteLine("Day: " + Day);
+        Console.WriteLine("Day: " + Day + Environment.NewLine);
         string[] input = ReadText(Year,Day);
         RunDay(Year,Day,input);
         Console.WriteLine("======================");

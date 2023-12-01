@@ -4,13 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Advent.of.Code._2023
+namespace Advent.of.Code
 {
     public abstract class Day
     {
         public void Run(string[] input)
         {
-            Console.WriteLine("");
             RunDay(input);
         }
         public void RunDay(string[] input)
