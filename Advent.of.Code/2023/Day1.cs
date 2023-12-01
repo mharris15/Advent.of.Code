@@ -6,19 +6,9 @@ using System.Threading.Tasks;
 
 namespace Advent.of.Code._2023
 {
-    public static class Day1
+    public class Day1 : Day
     {
-        public static void Run(string[] input)
-        {
-            Console.WriteLine("");
-            Trebucket(input);
-        }
-        public static void Trebucket(string[] input)
-        {
-            Part1(input);
-            Part2(input);
-        }
-        public static void Part1(string[] input)
+        protected override void Part1(string[] input)
         {
             int CalibrationValue = 0;
             foreach (string line in input)
@@ -28,7 +18,7 @@ namespace Advent.of.Code._2023
             }
             Console.WriteLine("Part 1: " + CalibrationValue);
         }
-        public static void Part2(string[] input)
+        protected override void Part2(string[] input)
         {
             int CalibrationValue = 0;
             foreach (string line in input)

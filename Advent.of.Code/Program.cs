@@ -1,4 +1,5 @@
-﻿using System.Reflection;
+﻿using Advent.of.Code._2023;
+using System.Reflection;
 
 class Program
 {
@@ -47,19 +48,8 @@ class Program
         {
             if (type != null)
             {
-                MethodInfo methodInfo = type.GetMethod("Run");
-                if (methodInfo != null)
-                {
-                    // Define input parameters
-                    object[] parameters = { input }; 
-
-                    // Invoke the method, since it is a static class no instance is needed.
-                    methodInfo.Invoke(null, parameters);
-                }
-                else
-                {
-                    Console.WriteLine($"Method 'Run' not found in class {className}.");
-                }
+                Day dayInstance = (Day)Activator.CreateInstance(type);
+                dayInstance.Run(input);
             }
             else
             {
