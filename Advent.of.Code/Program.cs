@@ -10,7 +10,7 @@ class Program
     {
         Console.WriteLine("======================");
         Console.WriteLine("Year: "+Year);
-        Console.WriteLine("Day: " + Day + Environment.NewLine);
+        Console.WriteLine("Day: " + Day);
         string[] input = ReadText(Year,Day);
         RunDay(Year,Day,input);
         Console.WriteLine("======================");
@@ -23,7 +23,7 @@ class Program
         string directoryPath = Path.Combine(solutionDirectory, "Data", year);
         string filePath = Path.Combine(directoryPath, $"day_{day}_input.txt");
         return File.ReadAllText(filePath)
-               .Split(' ', '\r', '\n').
+               .Split('\n'). //.Split(' ', '\r', '\n').
                Where(x => x != "").ToArray();
     }
 
@@ -34,10 +34,10 @@ class Program
 
         while (directory != null && directory.Name != "Advent.of.Code")
         {
-            directory = directory.Parent;
+            directory = directory.Parent!;
         }
 
-        return directory?.FullName;
+        return directory?.FullName!;
     }
 
     static void RunDay(string year, string day, string[] input)
