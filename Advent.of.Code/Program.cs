@@ -4,10 +4,11 @@ using System.Reflection;
 class Program
 {
     static readonly string Year = "2023";
-    static readonly string Day = "2";
+    static readonly string Day = "5";
     
     static void Main()
     {
+
         Console.WriteLine("======================");
         Console.WriteLine("Year: "+Year);
         Console.WriteLine("Day: " + Day);
@@ -23,7 +24,8 @@ class Program
         string directoryPath = Path.Combine(solutionDirectory, "Data", year);
         string filePath = Path.Combine(directoryPath, $"day_{day}_input.txt");
         return File.ReadAllText(filePath)
-               .Split('\n'). //.Split(' ', '\r', '\n').
+               .Split("map").
+               // .Split(' ', '\r', '\n').
                Where(x => x != "").ToArray();
     }
 
