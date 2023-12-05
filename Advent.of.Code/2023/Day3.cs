@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Advent.of.Code.Attributes;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -7,6 +8,10 @@ using System.Threading.Tasks;
 
 namespace Advent.of.Code._2023
 {
+    /// <summary>
+    /// Day 3: Gear Ratios: https://adventofcode.com/2023/day/3
+    /// </summary>
+    [Advent("Gear Ratios", Difficulty.Medium)]
     public class Day3 : Day
     {
        public static Point[] Diagonals { get; } =

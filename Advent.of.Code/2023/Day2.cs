@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Advent.of.Code.Attributes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,6 +7,11 @@ using System.Threading.Tasks;
 
 namespace Advent.of.Code._2023
 {
+    /// <summary>
+    /// Day 2: Cube Conundrum: https://adventofcode.com/2023/day/2
+    /// </summary>
+
+    [Advent("Cube Conundrum", Difficulty.Easy)]
     public class Day2 : Day
     {
         static readonly int Red_Cube_Max  = 12;

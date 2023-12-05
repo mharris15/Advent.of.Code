@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Advent.of.Code.Attributes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,6 +7,12 @@ using System.Threading.Tasks;
 
 namespace Advent.of.Code._2023
 {
+
+    /// <summary>
+    /// Day 1: Trebuchet?!: https://adventofcode.com/2023/day/1
+    /// </summary>
+
+    [Advent("Trebuchet?!", Difficulty.Easy)]
     public class Day1 : Day
     {
         protected override void Part1(string[] input)
