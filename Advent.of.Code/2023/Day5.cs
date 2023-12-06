@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Text.RegularExpressions;
-using System.Net.Sockets;
+﻿using System.Text.RegularExpressions;
 using Advent.of.Code.Attributes;
 
 namespace Advent.of.Code._2023
