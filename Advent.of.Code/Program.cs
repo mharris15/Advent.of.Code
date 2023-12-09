@@ -4,7 +4,7 @@ using System.Reflection;
 class Program
 {
     static readonly string Year = "2023";
-    static readonly string Day = "8";
+    static readonly string Day = "9";
     
     static void Main()
     {
@@ -23,10 +23,10 @@ class Program
         string solutionDirectory = GetSolutionDirectory();
         string directoryPath = Path.Combine(solutionDirectory, "Data", year);
         string filePath = Path.Combine(directoryPath, $"day_{day}_input.txt");
-        return File.ReadAllText(filePath) // ReadAllLines
-               .Split('\n').//.Split("map").
+        return File.ReadAllLines(filePath)//.ReadAllText(filePath) // ReadAllLines
+             //  .Split('\n').//.Split("map").
                // .Split(' ', '\r', '\n').
-               Where(x => x != "").ToArray();
+               .Where(x => x != "").ToArray();
     }
 
     static string GetSolutionDirectory()
