@@ -4,7 +4,7 @@ using System.Reflection;
 class Program
 {
     static readonly string Year = "2023";
-    static readonly string Day = "9";
+    static readonly string Day = "10";
     
     static void Main()
     {
