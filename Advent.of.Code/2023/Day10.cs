@@ -10,7 +10,7 @@ namespace Advent.of.Code._2023
     /// <summary>
     /// Day Link: https://adventofcode.com/2023/day/10
     /// </summary>
-    [Advent("Pipe Maze", Difficulty.Medium)]
+    [Advent("Pipe Maze", Difficulty.Hard)]
     internal class Day10 : Day
     {
         public struct Node
@@ -38,10 +38,6 @@ namespace Advent.of.Code._2023
         int _maxWidth;
         int _maxHeight;
         Node _startingPointLocation; 
-        Node _north = new Node(0, -1);
-        Node _south = new Node(0, 1);
-        Node _east = new Node(1, 0);
-        Node _west = new Node(-1, 0);
         List<List<char>> CreateMap(string[] input)
         {
             List<List<char>> Map = new List<List<char>>();
