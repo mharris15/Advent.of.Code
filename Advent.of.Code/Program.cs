@@ -1,31 +1,51 @@
 ﻿using Advent.of.Code;
-using System.Reflection;
+using Advent.of.Code.Services;
 
 class Program
 {
-    static readonly string Year = "2023";
-    static readonly string Day = "11";
-    
+    static readonly string SessionCookie = "*";
+    static readonly string Year = "2015";
+    static readonly string Day = "5";
+
+
     static void Main()
     {
-
         Console.WriteLine("======================");
+
+        string filePath = GetFilePath(Year, Day);
+        WriteNewDayFile(Year, Day, filePath).GetAwaiter().GetResult();
+ 
         Console.WriteLine("Year: "+Year);
         Console.WriteLine("Day: " + Day);
-        string[] input = ReadText(Year,Day);
+
+        string[] input = ReadText(filePath);
         RunDay(Year,Day,input);
+
         Console.WriteLine("======================");
     }
 
-
-    static string[] ReadText(string year, string day)
+    static string GetFilePath(string year, string day)
     {
         string solutionDirectory = GetSolutionDirectory();
         string directoryPath = Path.Combine(solutionDirectory, "Data", year);
-        string filePath = Path.Combine(directoryPath, $"day_{day}_input.txt");
+        return Path.Combine(directoryPath, $"day_{day}_input.txt");
+    }
+
+    static async Task WriteNewDayFile(string year, string day, string filePath)
+    {
+        if (!File.Exists(filePath)) 
+        {
+            AdventOfCodeService adventOfCodeService = new AdventOfCodeService(SessionCookie);
+            string day_input = await adventOfCodeService.GetInputForDayAsync(int.Parse(year), int.Parse(day));
+            await File.WriteAllTextAsync(filePath, day_input);
+         }    
+    }
+
+    static string[] ReadText(string filePath)
+    {
         return File.ReadAllLines(filePath)//.ReadAllText(filePath) // ReadAllLines
-             //  .Split('\n').//.Split("map").
-               // .Split(' ', '\r', '\n').
+              // .Split('\n')//.Split("map").
+             //   .Split(' ', '\r', '\n').
                .Where(x => x != "").ToArray();
     }
 
