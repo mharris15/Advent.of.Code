@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <Folder Include="Data\2015\" />
+    <Folder Include="Data\2024\" />
   </ItemGroup>
 
 </Project>
