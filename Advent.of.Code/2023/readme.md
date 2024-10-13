@@ -1,5 +1,5 @@
 # Advent-of-Code
-This repository contains my solutions for the problems of Advent of Code 2024.
+This repository contains my solutions for the problems of Advent of Code 2023
 
 ```
                          *   .   /\ ' .            14 **
@@ -27,11 +27,3 @@ This repository contains my solutions for the problems of Advent of Code 2024.
 ----@        '''..*......'''                       2  **
   * ! /^\                                          1  **
 ```
-
-
-# Stars count: 0 :star:
-
-Day | Task | STARS |
------------- | ------------- | ------------- |
-1 |[1](./1/Day1.cs) | :star: :star: |
-

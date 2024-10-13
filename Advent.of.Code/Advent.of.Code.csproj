@@ -8,8 +8,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Data\2015\" />
-    <Folder Include="Data\2024\" />
+    <Compile Remove="Data\**" />
+    <EmbeddedResource Remove="Data\**" />
+    <None Remove="Data\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.1" />
   </ItemGroup>
 
 </Project>
