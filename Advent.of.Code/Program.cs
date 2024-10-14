@@ -1,8 +1,8 @@
 ﻿using Advent.of.Code.Services;
 class Program
 {
-    private static readonly string year = "2023";
-    private static readonly string day = "14";
+    private static readonly string year = "2024";
+    private static readonly string day = "1";
     static void Main()
     {
         Console.WriteLine("======================");
@@ -16,11 +16,3 @@ class Program
         Console.WriteLine("======================");
     }
 }
-
-
-
-
-
-
-
-

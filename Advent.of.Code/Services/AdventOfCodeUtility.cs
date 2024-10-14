@@ -1,8 +1,9 @@
-﻿namespace Advent.of.Code.Services
+﻿#pragma warning disable CS8618
+namespace Advent.of.Code.Services
 {
     public static class AdventOfCodeUtility
     {
-        public static readonly AdventOfCodeService service = new();
+        private static readonly AdventOfCodeService service = new();
         private static string _year;
         private static string _day;
         private static string _filePath;
@@ -22,13 +23,7 @@
                 await File.WriteAllTextAsync(filePath, day_input);
             }
         }
-        public static string[] ReadText(string filePath)
-        {
-            return File.ReadAllLines(filePath)//.ReadAllText(filePath) // ReadAllLines
-                                              // .Split('\n')//.Split("map").
-                                              //   .Split(' ', '\r', '\n').
-                   .Where(x => x != "").ToArray();
-        }
+        public static string[] ReadText(string filePath) => File.ReadAllLines(filePath).Where(x => x != "").ToArray();
 
         public static string GetSolutionDirectory()
         {

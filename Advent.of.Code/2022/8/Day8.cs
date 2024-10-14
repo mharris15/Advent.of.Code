@@ -9,13 +9,14 @@ using System.Runtime.CompilerServices;
 using System.Reflection;
 using System.Reflection.Metadata;
 using System.Xml.Linq;
-
+#pragma warning disable CS8618
 namespace Advent.of.Code._2022
 {
 
     public class Day8
     {
         private static Node[,] nodes;
+
         private static int totalVisibleCount = 0;
         private static List<int> TotalScenic = new List<int>();
         private static int maxWidth = 0;
