@@ -10,6 +10,7 @@ namespace Advent.of.Code.Attributes
     {
         Easy,
         Medium,
-        Hard
+        Hard,
+        NA
     }
 }

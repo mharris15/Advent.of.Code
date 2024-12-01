@@ -10,7 +10,7 @@ namespace Advent.of.Code._2024
     /// <summary>
     /// Day Link: https://adventofcode.com/2024/day/2
     /// </summary>
-    [Advent("Day Title", Difficulty.Easy)]
+    [Advent("Day Title", Difficulty.NA)]
     internal class Day2 : Day
     {
         protected override void Part1(string[] input)
