@@ -9,5 +9,5 @@ This repository contains my solutions for the problems of Advent of Code 2024.
 
 | Day | Task        | STARS        |
 |-----|-------------|--------------|
-| 1   | [Day 1](./1/Day1.cs) | :star: :star: |
+| 1   | [Historian Hysteria](./1/Day1.cs) | :star: :star: |
 
