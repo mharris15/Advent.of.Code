@@ -11,5 +11,5 @@ This repository contains my solutions for the problems of Advent of Code 2024.
 | Day | Task        | STARS        |
 |-----|-------------|--------------|
 | 1   | [Historian Hysteria](./1/Day1.cs) | :star: :star: |
-| 1   | [Red-Nosed Reports](./2/Day2.cs) | :star: :star: |
+| 2   | [Red-Nosed Reports](./2/Day2.cs) | :star: :star: |
 
