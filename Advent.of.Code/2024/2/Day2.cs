@@ -10,7 +10,7 @@ namespace Advent.of.Code._2024
     /// <summary>
     /// Day Link: https://adventofcode.com/2024/day/2
     /// </summary>
-    [Advent("Red-Nosed Reports", Difficulty.NA)]
+    [Advent("Red-Nosed Reports", Difficulty.Easy)]
     public class Day2 : Day
     {
         // Check how many lists are monotonic
@@ -59,7 +59,6 @@ namespace Advent.of.Code._2024
             {
                 var list = line.Split(" ").Select(int.Parse).ToList();
 
-                // Function to check if the list is monotonic and gradual
                 bool IsMonotonicAndGradual(List<int> lst)
                 {
                     bool asc = true;
@@ -83,19 +82,16 @@ namespace Advent.of.Code._2024
                     return asc || desc; // Monotonic condition
                 }
 
-                // Check if the original list is safe
                 if (IsMonotonicAndGradual(list))
                 {
                     safe++;
                     continue;
                 }
 
-                // Check if removing a single element makes the list safe
                 bool isSafeWithOneRemoval = false;
 
                 for (int i = 0; i < list.Count; i++)
                 {
-                    // Create a temporary list without the current element
                     var tempList = new List<int>(list);
                     tempList.RemoveAt(i);
 
@@ -110,27 +106,7 @@ namespace Advent.of.Code._2024
                     safe++;
             }
 
-            // Output the count of safe lines
-            Console.WriteLine(safe);
-        }
-
-
-
-        bool isSafe(List<int> list)
-        {
-            bool isAscending = true;
-            bool isDescending = true;
-
-            for (int i = 0; i < list.Count - 1; i++)
-            {
-                int diff = Math.Abs(list[i] - list[i + 1]);
-                if (diff < 1 || diff > 3) return false;
-
-                if (list[i] > list[i + 1]) isAscending = false;
-                if (list[i] < list[i + 1]) isDescending = false;
-            }
-
-            return isAscending || isDescending;
+            Console.WriteLine($"Part 2: {safe}");
         }
     }
 }
