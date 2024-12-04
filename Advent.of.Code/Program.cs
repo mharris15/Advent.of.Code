@@ -2,7 +2,7 @@
 class Program
 {
     private static readonly string year = "2024";
-    private static readonly string day = "3";
+    private static readonly string day = "4";
     static void Main()
     {
         Console.WriteLine("======================");

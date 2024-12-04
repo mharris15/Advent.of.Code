@@ -34,7 +34,7 @@ namespace Advent.of.Code._2024
                 }
             }
 
-                Console.Write($"Part 1: {result} | ");
+                Console.WriteLine($"Part 1: {result}");
         }
         protected override void Part2(string[] input)
         {
@@ -69,7 +69,7 @@ namespace Advent.of.Code._2024
                     }
                 }
             }
-                Console.Write($"Part 2: {result} | ");
+                Console.WriteLine($"Part 2: {result}");
         }
     }
 }

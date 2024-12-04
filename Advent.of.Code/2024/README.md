@@ -2,9 +2,10 @@
 This repository contains my solutions for the problems of Advent of Code 2024.
 
 ```
-          .--' ~ ~ ~ |        .-' *       \  /    '-.  1 **
+        .--' ~ ~ ~ |        .-' *       \  /    '-.    1 **
        .--' ~ ,* ~ |        | >o<   \_\_\|_/__/     |  2 **
 .---' : ~ ' (~) , ~|        | >@>O< o-_/ .()__------|  3 **
+@|..  '. ~ " ' ~   |        |>O>o<@<\____         .'|  4 **
 ```
 
 # Stars count: 6 :star:
@@ -14,4 +15,5 @@ This repository contains my solutions for the problems of Advent of Code 2024.
 | 1   | [Historian Hysteria](./1/Day1.cs) | :star: :star: |
 | 2   | [Red-Nosed Reports](./2/Day2.cs)  | :star: :star: |
 | 3   | [Mull It Over](./3/Day3.cs)       | :star: :star: |
+| 3   | [Ceres Search](./4/Day4.cs)       | :star: :star: |
 
