@@ -76,7 +76,7 @@ namespace Advent.of.Code._2024
             }
 
 
-            // If neither addition nor multiplication works, return false
+            // If neither addition, multiplication, or concat works, return false
             return false;
         }
         // Helper function to concatenate two numbers
